@@ -1,0 +1,130 @@
+import { BlogPost } from "@/types";
+
+export const blogPostsData: BlogPost[] = [
+  {
+    id: "modern-web-development-trends-2025",
+    slug: "modern-web-development-trends-2025",
+    title: "Modern Web Development Trends in 2025: From React Server Components to Edge Computing",
+    category: "Architecture",
+    publishDate: "October 14, 2024",
+    readingTime: "6 min read",
+    author: {
+      name: "Marcus Vance",
+      role: "Head of Engineering",
+      avatarInitials: "MV"
+    },
+    summary: "How modern full-stack web architectures are shifting towards streaming server components, zero-bundle abstractions, and global edge compute.",
+    content: [
+      "The web development paradigm has undergone a seismic shift over the past 24 months. For years, client-side rendering (CSR) with massive Single Page Application (SPA) bundles reigned supreme. However, the resulting client device resource strain, delayed first paints on mobile devices, and complex SEO hydration workarounds prompted a major re-evaluation.",
+      "Today, frameworks like Next.js with React Server Components (RSC) represent a hybrid ideal: compute-heavy operations and static rendering occur on the server or at the edge, while only lightweight, truly interactive widgets ship JavaScript to the user's browser.",
+      "Edge computing has moved from an experimental luxury to an industry standard. Deploying compute logic directly to global Content Delivery Network (CDN) nodes allows applications to personalize content, verify authentication headers, and execute A/B tests with sub-50ms latency regardless of where the visitor is located.",
+      "For engineering leaders planning new digital initiatives in 2025, the takeaway is clear: prioritize initial page weight, minimize main-thread JavaScript execution, and leverage native platform primitives before pulling in third-party libraries."
+    ],
+    relatedPostSlugs: ["choosing-between-nextjs-and-vite", "mastering-core-web-vitals-for-seo"]
+  },
+  {
+    id: "choosing-between-nextjs-and-vite",
+    slug: "choosing-between-nextjs-and-vite",
+    title: "Choosing Between Next.js and Vite: An Architectural Comparison for Scale",
+    category: "Frontend",
+    publishDate: "November 2, 2024",
+    readingTime: "5 min read",
+    author: {
+      name: "Sarah Chen",
+      role: "Lead UI Architect",
+      avatarInitials: "SC"
+    },
+    summary: "When to choose Next.js for SEO and server-side capability versus Vite for blazing fast internal tooling and authenticated dashboards.",
+    content: [
+      "One of the most frequent technical dilemmas engineering teams face when initiating a new React project is deciding between Next.js and Vite. While both are exceptional tools, they are engineered for fundamentally distinct application profiles.",
+      "Next.js is the gold standard for public-facing websites, eCommerce stores, and editorial platforms where Search Engine Optimization (SEO), Open Graph social previews, and instant First Contentful Paint (FCP) are paramount. With native support for SSR, SSG, and ISR, Next.js ensures crawlers and users receive fully rendered HTML on the initial network request.",
+      "Conversely, Vite excels brilliantly for rich authenticated dashboards, SaaS back-office interfaces, and internal enterprise tools. Because these applications live behind login walls where search engines cannot tread, the added complexity of server rendering is often unnecessary. Vite provides unmatched developer experience with sub-second Hot Module Replacement (HMR) and a completely unopinionated deployment pipeline to any static storage bucket.",
+      "In summary: if your application's success depends on search engine indexation and public page speed, choose Next.js. If you are building an interactive software workspace behind authentication, Vite offers simplicity, speed, and minimal hosting overhead."
+    ],
+    relatedPostSlugs: ["modern-web-development-trends-2025", "micro-frontends-architectural-guide"]
+  },
+  {
+    id: "headless-ecommerce-conversion-playbook",
+    slug: "headless-ecommerce-conversion-playbook",
+    title: "The Headless eCommerce Conversion Playbook: Sub-Second Load Times and Revenue Growth",
+    category: "eCommerce",
+    publishDate: "November 18, 2024",
+    readingTime: "7 min read",
+    author: {
+      name: "Camille Laurent",
+      role: "eCommerce Practice Lead",
+      avatarInitials: "CL"
+    },
+    summary: "How decoupling frontend storefronts from monolithic eCommerce engines unlocks sub-second page transitions and boosts mobile conversion rates.",
+    content: [
+      "Traditional monolithic eCommerce platforms bundle database records, business logic, checkout flows, and templating into a single server process. While convenient for getting started, these systems inevitably accumulate code bloat as marketing teams install plugins, tracking pixels, and custom scripts.",
+      "Headless commerce solves this bottleneck by completely decoupling the customer-facing frontend from the backend commerce engine. The frontend is built as a static or edge-rendered application using modern web technologies like Next.js, while the backend operates strictly as a headless API handling catalog data, orders, and payment security.",
+      "The business impact of this architectural shift is dramatic. By eliminating server rendering bottlenecks and pre-fetching product data when users hover over catalog cards, page transitions happen instantaneously. Mobile bounce rates plummet, and the seamless shopping experience directly translates to a measurable 20% to 50% increase in checkout conversions.",
+      "Furthermore, marketing teams gain total creative freedom. Rather than being restricted by rigid theme templates, designers can create custom interactive bundle builders, 3D product customizers, and personalized landing pages that would be impossible inside legacy storefront builders."
+    ],
+    relatedPostSlugs: ["mastering-core-web-vitals-for-seo", "modern-web-development-trends-2025"]
+  },
+  {
+    id: "scaling-engineering-teams-hire-vs-build",
+    slug: "scaling-engineering-teams-hire-vs-build",
+    title: "Scaling Engineering Teams: Dedicated Remote Talent vs. In-House Recruitment",
+    category: "Engineering Management",
+    publishDate: "December 4, 2024",
+    readingTime: "6 min read",
+    author: {
+      name: "Marcus Vance",
+      role: "Head of Engineering",
+      avatarInitials: "MV"
+    },
+    summary: "A practical guide for CTOs and founders evaluating whether to build an internal recruitment pipeline or partner with dedicated staff augmentation.",
+    content: [
+      "In modern software development, engineering velocity is the primary differentiator between market leaders and also-rans. However, scaling an in-house engineering team has become an arduous, expensive marathon. The average time-to-hire for a senior full-stack engineer in North America exceeds 60 days, with recruiter fees often consuming 20% to 25% of first-year base salary.",
+      "Staff augmentation with pre-vetted senior developers provides an agile alternative. Rather than spending months reviewing hundreds of unqualified resumes, companies can onboard experienced engineers within 48 to 72 hours. These developers integrate directly into your existing Git workflows, attend daily standups, and contribute production-quality code from day one.",
+      "The key to successful augmented staffing lies in cultural and technical alignment. Ensure your external partner provides guaranteed timezone overlap, transparent hourly or monthly rates with zero hidden markups, and a risk-free trial period to validate real-world team chemistry.",
+      "By combining a strong core in-house leadership team with elastic senior talent, companies can scale capacity up or down to match roadmap milestones without taking on irreversible long-term fixed payroll liabilities."
+    ],
+    relatedPostSlugs: ["choosing-between-nextjs-and-vite", "micro-frontends-architectural-guide"]
+  },
+  {
+    id: "mastering-core-web-vitals-for-seo",
+    slug: "mastering-core-web-vitals-for-seo",
+    title: "Mastering Core Web Vitals: The Complete Engineering Guide for SEO Dominance",
+    category: "SEO & Performance",
+    publishDate: "January 10, 2025",
+    readingTime: "8 min read",
+    author: {
+      name: "Sarah Chen",
+      role: "Lead UI Architect",
+      avatarInitials: "SC"
+    },
+    summary: "A technical deep dive into optimizing Largest Contentful Paint (LCP), Interaction to Next Paint (INP), and Cumulative Layout Shift (CLS).",
+    content: [
+      "Google's Core Web Vitals are no longer theoretical guidelines—they are active ranking signals that directly influence where your pages appear in search results. Sites that deliver exceptional performance receive algorithmic preference, while sluggish sites suffer declining impression share.",
+      "Largest Contentful Paint (LCP) measures perceived loading speed. To achieve a score under 2.5 seconds on mobile 4G networks, ensure your hero image or primary heading is not hidden behind client-side JavaScript. Preload critical fonts, compress images into modern AVIF or WebP formats, and prioritize the LCP asset with fetchpriority='high'.",
+      "Interaction to Next Paint (INP) replaced First Input Delay (FID) as the definitive measure of page responsiveness. INP tracks every user interaction—clicks, taps, and keypresses—and measures the time until the browser paints the next visual frame. Eliminating long JavaScript tasks (>50ms) on the main thread and deferring non-essential computation via requestIdleCallback are essential techniques.",
+      "Cumulative Layout Shift (CLS) evaluates visual stability. Unexpected layout shifts occur when images, ads, or dynamic banners load without reserved dimensions, pushing content downward while the user is reading. Always define explicit width, height, or aspect-ratio CSS properties on all media containers to maintain a perfect CLS score of 0."
+    ],
+    relatedPostSlugs: ["modern-web-development-trends-2025", "headless-ecommerce-conversion-playbook"]
+  },
+  {
+    id: "micro-frontends-architectural-guide",
+    slug: "micro-frontends-architectural-guide",
+    title: "Micro-Frontends in Practice: When to Adopt and When to Run",
+    category: "Architecture",
+    publishDate: "February 5, 2025",
+    readingTime: "7 min read",
+    author: {
+      name: "Marcus Vance",
+      role: "Head of Engineering",
+      avatarInitials: "MV"
+    },
+    summary: "Breaking down monolithic web applications into independently deployable micro-frontends using Module Federation.",
+    content: [
+      "As enterprise organizations scale beyond dozens of developers contributing to a single web application, monolithic frontends frequently become severe delivery bottlenecks. Merge conflicts multiply, build times stretch into hours, and a minor bug in a secondary feature can bring down the entire production site.",
+      "Micro-frontends decompose the frontend into autonomous, independently deployable applications that assemble dynamically in the user's browser. Using Webpack 5 Module Federation or Vite Module Federation plugins, individual engineering teams can develop, test, and release their domain features without waiting on a monolithic release train.",
+      "However, micro-frontends introduce non-trivial complexity. Teams must establish strict governance around shared dependencies to prevent duplicate React runtime instances from bloating user payloads. Furthermore, cross-application communication should rely on decoupled custom events or URL state rather than tightly coupled global stores.",
+      "Our recommendation: avoid premature adoption of micro-frontends for small teams. Only transition when team coordination overhead exceeds the operational cost of managing independent micro-apps."
+    ],
+    relatedPostSlugs: ["choosing-between-nextjs-and-vite", "scaling-engineering-teams-hire-vs-build"]
+  }
+];

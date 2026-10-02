@@ -1,0 +1,175 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Base Warm Canvas: Ivory (#FBFCEE) */
+    --background: 64 67% 96%;
+    --foreground: 73 37% 17%; /* Deep Olive (#343B1B) */
+
+    /* Card Surfaces */
+    --card: 0 0% 100%;
+    --card-foreground: 73 37% 17%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 73 37% 17%;
+
+    /* Brand Primary: Celtic Blue (#3971B8) */
+    --primary: 214 53% 47%;
+    --primary-hover: 214 55% 40%;
+    --primary-foreground: 0 0% 100%;
+    --primary-subtle: 214 65% 94%;
+
+    /* Secondary: Tea Green (#C8D69B) */
+    --secondary: 74 44% 72%;
+    --secondary-hover: 74 44% 65%;
+    --secondary-foreground: 73 37% 17%;
+
+    /* Accent: Vanilla (#F6E6A5) */
+    --accent: 48 83% 81%;
+    --accent-hover: 48 83% 74%;
+    --accent-foreground: 73 37% 17%;
+
+    /* Deep Olive / Dark */
+    --dark: 73 37% 17%;
+    --dark-foreground: 64 67% 96%;
+
+    --muted: 64 25% 91%;
+    --muted-foreground: 73 20% 40%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 73 20% 86%;
+    --input: 73 20% 86%;
+    --ring: 214 53% 47%;
+
+    --radius: 1.25rem; /* 20px rounded cards */
+
+    /* Typography & Spacing Scale Tokens */
+    --font-sans: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+  }
+
+  .dark {
+    --background: 73 37% 12%;
+    --foreground: 64 67% 96%;
+
+    --card: 73 35% 15%;
+    --card-foreground: 64 67% 96%;
+
+    --popover: 73 35% 15%;
+    --popover-foreground: 64 67% 96%;
+
+    --primary: 214 53% 52%;
+    --primary-hover: 214 55% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-subtle: 214 45% 20%;
+
+    --secondary: 74 44% 65%;
+    --secondary-hover: 74 44% 58%;
+    --secondary-foreground: 73 37% 12%;
+
+    --accent: 48 83% 75%;
+    --accent-hover: 48 83% 68%;
+    --accent-foreground: 73 37% 12%;
+
+    --dark: 73 37% 17%;
+    --dark-foreground: 64 67% 96%;
+
+    --muted: 73 25% 22%;
+    --muted-foreground: 74 20% 70%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 73 25% 24%;
+    --input: 73 25% 24%;
+    --ring: 214 53% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Brand Palette Utilities */
+.bg-ivory { background-color: #FBFCEE; }
+.bg-celtic { background-color: #3971B8; }
+.text-celtic { color: #3971B8; }
+.bg-teagreen { background-color: #C8D69B; }
+.text-teagreen { color: #343B1B; }
+.bg-vanilla { background-color: #F6E6A5; }
+.text-vanilla { color: #343B1B; }
+.bg-deepolive { background-color: #343B1B; }
+.text-deepolive { color: #343B1B; }
+
+/* Tactile Soft Shadow and Card System */
+.shadow-soft {
+  box-shadow: 0 4px 20px -2px rgba(52, 59, 27, 0.06), 0 2px 6px -1px rgba(52, 59, 27, 0.04);
+}
+
+.shadow-hover {
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.shadow-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 32px -4px rgba(57, 113, 184, 0.14), 0 4px 12px -2px rgba(52, 59, 27, 0.06);
+}
+
+.shadow-celtic {
+  box-shadow: 0 6px 20px -2px rgba(57, 113, 184, 0.35);
+}
+
+/* Organic Wave Border / Transition */
+.wave-divider {
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+.wave-divider svg {
+  display: block;
+  width: 100%;
+  height: 48px;
+}

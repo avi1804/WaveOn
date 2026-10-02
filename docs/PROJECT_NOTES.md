@@ -1,0 +1,33 @@
+# Project Notes & Content Style Guide — WaveOn
+
+## Brand & Content Style Guide
+- **Brand Name:** WaveOn (written with capital 'W' and capital 'O', no space).
+- **Tagline:** Engineering High-Performance Digital Experiences.
+- **Tone:** Authoritative, energetic, transparent, client-outcome driven.
+- **Spelling:** US English (e.g., eCommerce, optimize, digital marketing).
+- **Typography Scale:**
+  - Display / Hero: `3rem` to `4.25rem` (clamp, bold/extrabold)
+  - H1: `2.25rem` to `3rem`
+  - H2: `1.875rem` to `2.25rem`
+  - H3: `1.5rem` to `1.75rem`
+  - H4: `1.25rem`
+  - Body: `1rem` (16px) with `1.6` line-height
+  - Small / Caption: `0.875rem` (14px)
+- **Color Tokens:**
+  - `--primary`: `21 100% 50%` (`#FE5B01`)
+  - `--primary-hover`: `21 100% 44%` (`#E04E00`)
+  - `--primary-foreground`: `0 0% 100%`
+  - `--background`: `0 0% 100%`
+  - `--foreground`: `222.2 84% 4.9%`
+  - `--card`: `0 0% 100%`
+  - `--card-foreground`: `222.2 84% 4.9%`
+  - `--muted`: `210 40% 96.1%`
+  - `--muted-foreground`: `215.4 16.3% 46.9%`
+  - `--border`: `214.3 31.8% 91.4%`
+- **Performance Budgets:**
+  - Initial JS payload < 200 KB compressed
+  - Zero CLS on all device viewports
+  - First Input Delay / INP < 150ms
+- **Assumptions Recorded:**
+  - Client inquiries are logged to browser console in development/demo mode with typed schema validation.
+  - All developer rates represent typical US/Global hybrid senior engineering rates ($35 - $75/hr).
